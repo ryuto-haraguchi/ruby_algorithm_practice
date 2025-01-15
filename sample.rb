@@ -112,25 +112,40 @@
 # p input[0] + "UPC"
 # puts input[0] + "UPC"
 
+# 1/15
+# input = gets.chomp.split
+# snakes = []
+# new_weight = 0
 
-input = gets.chomp.split
-snakes = []
-new_weight = 0
+# for i in 1..input[0].to_i do
+#   snake_data = gets.chomp.split
+#   snake = {
+#     width: snake_data[0].to_i,
+#     height: snake_data[1].to_i,
+#     weight: snake_data[0].to_i * snake_data[1].to_i
+#   }
+#   snakes << snake
+# end
 
-for i in 1..input[0].to_i do
-  snake_data = gets.chomp.split
-  snake = {
-    width: snake_data[0].to_i,
-    height: snake_data[1].to_i,
-    weight: snake_data[0].to_i * snake_data[1].to_i
-  }
-  snakes << snake
-end
+# for i in 1..input[1].to_i do
+#   snakes.each do |snake|
+#     snake[:weight] = (snake[:height] + i) * snake[:width]
+#   end
+#   max_weight = snakes.max_by{|snake| snake[:weight]}
+#   puts max_weight[:weight]
+# end 
 
-for i in 1..input[1].to_i do
-  snakes.each do |snake|
-    snake[:weight] = (snake[:height] + i) * snake[:width]
-  end
-  max_weight = snakes.max_by{|snake| snake[:weight]}
-  puts max_weight[:weight]
-end 
+# input = gets.chomp.to_i
+# moti_arr = gets.chomp.split.map(&:to_i)
+# kagamimoti = 0
+
+# moti_arr.sort!
+
+# moti_arr.each_with_index do |a, index|
+#   pos = moti_arr.bsearch_index { |b| b >= a * 2 }
+#   if pos
+#     kagamimoti += moti_arr.size - pos
+#   end
+# end
+
+# puts kagamimoti
