@@ -107,3 +107,30 @@
 #     puts employees[index].getname
 #   end
 # end
+
+# input = gets.chars
+# p input[0] + "UPC"
+# puts input[0] + "UPC"
+
+
+input = gets.chomp.split
+snakes = []
+new_weight = 0
+
+for i in 1..input[0].to_i do
+  snake_data = gets.chomp.split
+  snake = {
+    width: snake_data[0].to_i,
+    height: snake_data[1].to_i,
+    weight: snake_data[0].to_i * snake_data[1].to_i
+  }
+  snakes << snake
+end
+
+for i in 1..input[1].to_i do
+  snakes.each do |snake|
+    snake[:weight] = (snake[:height] + i) * snake[:width]
+  end
+  max_weight = snakes.max_by{|snake| snake[:weight]}
+  puts max_weight[:weight]
+end 
