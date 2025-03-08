@@ -149,3 +149,7 @@
 # end
 
 # puts kagamimoti
+
+def test 
+  puts "test"
+end
